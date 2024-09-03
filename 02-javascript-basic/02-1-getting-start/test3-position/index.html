@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--test3 load는 js의 브라우저 약속 함수임-->
+    <script> 
+        window.addEventListener('load',function(e){
+        let selectNode=document.getElementById('a1')
+        selectNode.style.backgroundColor='red'
+        })
+    </script>
+</head>
+<body>
+    <!---test1-->
+    <!-- <script>
+        let selectNode=document.getElementById('a1')
+        selectNode.style.backgroundColor='red'
+    </script> -->
+    <h1 id="a1">one</h1>
+    <h1 id="a2">two</h1>
+    <!--test2-->
+    <script>
+        let selectNode=document.getElementById('a1')
+        selectNode.style.backgroundColor='red'
+    </script>
+</body>
+</html>
