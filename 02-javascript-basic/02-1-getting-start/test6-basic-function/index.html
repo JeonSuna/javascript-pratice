@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div>
+        <button onclick="dialogTest()">dialogTest </button>
+         </div>   
+         <script>
+            const dialogTest=() =>{
+             //   let result1=alert('test')
+              //  console.log('alert ressult '+result1)
+
+              let result2=confirm('로그인 화면으로 이동')
+              console.log('confirm result ' +result2)
+              //취소:confirm result false
+              //확인:confirm result true
+            // if(result2){
+            //     console.log('로그인으로 이동하겠스비다')
+            // }
+            // else{
+            //     console.log('로그인으로 이동하지 않겟습니다')
+            // }
+            let result3=prompt('슷자를 입력해주세요')
+            console.log('prompt result '+result3)
+            //취소:prompt result null
+            //입력없이 확인: prompt result 
+            //입력하면:prompt result ㅇㅇㅇ : 유저입력 문자열 반환
+            }
+         </script>
+
+</body>
+</html>
