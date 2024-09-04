@@ -32,5 +32,19 @@
             }
          </script>
 
+         <div>
+            <button onclick="writeTest()">write test</button>
+         </div>
+         <script>
+            const writeTest=()=>{
+                let name = prompt('이름을 입력해주세요')
+                document.write(
+                    '<div>안녕하세요 <b style="color:blue;">'
+                        + name +
+                        '</b>님,환영합니다.</div>'
+                )
+            }
+         </script>
+         
 </body>
 </html>
