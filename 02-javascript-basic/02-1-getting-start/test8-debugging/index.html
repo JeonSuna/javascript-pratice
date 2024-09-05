@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,26 @@
     <script>
         /*console찍으면서 오류위치 찾아내기.(실행 되는지 안되는지)*/
         console.log('qq')
-        window.addEventListener('load',function(e) {
+        window.addEventListener('load', function (e) {
             console.log('22')
             let selectNode = document.getElementById('a1')
             selectNode.style.backgroundColor = 'red'
         })
+
+        //서버연동 ...ajax
+        let url = "http://openapi.seoul.go.kr:8088/794750456f6a656c36375057595344/json/culturalSpaceInfo/1/5/"
+        let xhr = new XMLHttpRequest()
+        xhr.open('get,url,true')
+        xhr.onload = function () {
+            alter('서버연동이 완료되었습니다')
+        }
+
     </script>
 </head>
+
 <body>
     <h1 id="a1">one</h1>
     <h2 id="a2">two</h2>
 </body>
-</html>
 
+</html>
