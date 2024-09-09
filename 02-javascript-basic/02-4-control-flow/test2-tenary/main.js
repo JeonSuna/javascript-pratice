@@ -12,4 +12,3 @@ console.log(result) //4의 배수입니다
 
 let result2 = (data % 4 === 0) ? '4의 배수입니다' : "5의 배수가 아닙니다"
 console.log(result2) //4의 배수입니다
-
