@@ -7,11 +7,10 @@ let result = document.querySelector('#result');
 function printResult(msg) {
     result.innerHTML=msg
 }
+//form에 한꺼번에 제출되기 때믄에(버튼이나 input별로 각각 이벤트가 일어나는게 아니라 form을 씀)
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    let name = input1.value
-    let phone = input2.value
-    let job = select.value
-    printResult(`name:${name}<br> 전화번호:${phone}<br>직업:${job}`)
-})
+   // e.target하면 form이 나옴
 
+    printResult(`name:${input1.value}<br> 전화번호:${input2.value}<br>직업:${select.value}`)
+})
