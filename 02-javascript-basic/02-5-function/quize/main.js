@@ -13,3 +13,6 @@ const calcBonus = (name, arg1, money) => {
     console.log(`${name}의 추석 보너스는 ${new_money}입니다`)
 }
 calcBonus('전선아', 'A', 1000)
+
+
+

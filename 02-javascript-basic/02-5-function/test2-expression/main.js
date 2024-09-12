@@ -4,6 +4,7 @@
 function myFun1() {
     console.log('myFun1 call')
 }
+//함수 표현식
 const myFun2 = function () {
     console.log('myFun2 call')
 }

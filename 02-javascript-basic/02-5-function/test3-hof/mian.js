@@ -21,9 +21,10 @@ console.log(data1)//10
 function test1() { console.log('test1') }
 function test2() { console.log('test2') }
 
+
 //함수를 매개변수로, 리턴으로.. 일반 선언식 함수도 가능하다..
 function myFun2(arg) {
-    arg()
+    arg() //함수 호출
     return test2
 }
 let result = myFun2(test1)
