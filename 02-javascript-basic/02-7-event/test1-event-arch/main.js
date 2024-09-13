@@ -6,8 +6,8 @@ window.addEventListener('load', () => {
 })//이벤트 콜백 함수
 window.onload = () => {
     console.log('html 문서 로딩이 완료... 2')
-} //이벤트 콜백 함수
-
+} 
+///DOM함수
 const myEventHandler = () => {
     console.log('myEventHandler.. button click')
 }
@@ -22,3 +22,4 @@ let button2Node = document.getElementById('BTN2')
 button2Node.onclick = () => {
     console.log('button 2 click')
 }
+
