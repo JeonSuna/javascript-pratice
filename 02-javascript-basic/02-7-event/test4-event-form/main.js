@@ -23,14 +23,16 @@ input1.addEventListener('focus', (e) => {
 })
 input1.addEventListener('blur', (e) => {
     e.target.style.background = ''
-    printResult(`input data:${e.target.value}`)
+    msg =`input data:${e.target.value}`
+    printResult()
 })
 
 select1.addEventListener('focus', (e) => {
     e.target.style.background='pink'
 })
 select1.addEventListener('change', (e) => {
-    printResult(`input change:${e.target.value}`)
+    msg = `input change:${e.target.value}`
+    printResult()
 })
 select1.addEventListener('blur', (e) => {
     e.target.style.background=''
