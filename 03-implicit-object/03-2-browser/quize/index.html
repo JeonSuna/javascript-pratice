@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+    <button onclick="goChild()">주소입력</button>
+    <div id="result" style="font-weight: bold;"></div>
+
+    <script>
+        let result = document.querySelector('#result')
+        function goChild() {
+            window.open('address.html', '_blank', 'left=100,top=100,width=300,height=400')
+        }
+
+        function resultFun(address) {
+            result.innerHTML = address
+        }
+    </script>
+</body>
+</html>
