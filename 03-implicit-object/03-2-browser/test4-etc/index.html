@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>location test</h3>
+    <button onclick="locationTest()">location Test</button>
+
+    <script>
+           //http://127.0.0.1:5501/03-implicit-object/03-2-browser/test4-etc/index.html?name=jein&age=20#test1
+        function locationTest(){
+            console.log(location.href)
+            console.log(location.protocol) //http:
+            console.log(location.host) //127.0.0.1:5501
+            console.log(location.hostname)//127.0.0.1
+            console.log(location.port)//5501
+            console.log(location.pathname)///03-implicit-object/03-2-browser/test4-etc/index.html
+            console.log(location.search)
+            console.log(location.hash)
+            console.log(location.origin)//http://127.0.0.1:5501
+        }
+        //search와 origin과 hash가 의미하는거 알기 
+    </script>
+    <button onclick="goGoogle()">go google-href</button>
+    <button onclick="goGoogle2()">go google-replace</button>
+    <script>
+         function goGoogle(){
+            location.href='http://www.google.com' //백버튼 활성화O
+         }
+         function goGoogle2(){
+            location.replace('http://www.google.com') //백버튼 활송화X, html정보가 history에 유지X=비활성화
+         }
+    </script>
+    <h3>history test</h3>
+    <button onclick="goBack()">Back</button>
+    <button onclick="goForward()">forward</button>
+    <button onclick="go()">go</button>
+    <script>
+        function goBack(){
+            history.back()
+        }
+        function goForward(){
+            history.forward()
+        }
+        function go(){
+            let input =prompt('숫자를 입력해주세요')
+            if (isNaN(input)){
+                alert('숫자를 입력하세요')
+            }
+            else{
+                let no=parseInt(input)
+                history.go(no) //-2면 두칸 이전,,,  
+            }
+        }
+    </script>
+    <h3> navigator test</h3>
+    <button onclick="navigatorTest()"> navigator test</button>
+    <script> 
+        function navigatorTest(){
+            console.log(navigator.cookieEnabled)// 쿠키 허용하는지  //true
+            console.log(navigator.language) // 언어 확인 //ko-KR
+            console.log(navigator.onLine) //네트워크 연결됐나 확인 //true
+            console.log(navigator.userAgent) // 브라우저,플랫폼 정보 //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36
+       //현재 많은 브라우저가 webkit 베이스의 브라우저이다, webkit은 브라우저를 만드는 프레임워크이다. apple에서 safari만들 때 코드공개함, 그때 만들어진 게 webikit임
+        }
+    </script>
+</body>
+</html>

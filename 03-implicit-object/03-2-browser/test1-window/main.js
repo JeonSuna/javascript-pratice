@@ -27,7 +27,8 @@ function myOpen3() {
         'left=100,top=100,width=300, height=400'
     )
 
-    if (childWindow == null) {
+    if (childWindow == null) {  //: 브라우저의 팝업 차단 기능이 활성화되어 있거나 사용자가 팝업을 허용하지 않은 경우, 
+                                //window.open() 함수는 null을 반환합니다.
         alert('팝업이 차단되었습니다')
     }
 }
