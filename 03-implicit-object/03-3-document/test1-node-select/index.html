@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>one</div>
+    <div>two</div>
+    <div id="a1">three</div>
+    <div class="b1">four</div>
+    <div id="a2">
+        <div>five</div>
+        <div class="b1">six</div>
+    </div>
+    <div>
+        <input type="text" name="address"><br>
+        <p id="result"></p>
+    </div>
+    <p><button onclick="idTest()">id test</button></p>
+    <script>
+        function idTest(){
+            let selectNode=document.getElementById('a1')
+            selectNode.style.backgroundColor='red'
+        }
+    </script>
+    <P><button onclick="tagNameTest()">tagNameTest</button></P>
+    <script>
+        function tagNameTest(){
+            //getElementsByTagName-걸리는 노드 모두 반환
+            //selectNode는 여러개의 노드를 표현함. (div가 여러개)
+            // let selectNode=document.getElementsByTagName('div')
+            // selectNode.style.backgroundColor='red' //아무것도 안뜸.이유는? 
+            //collection이 단일노드가 아니라 여러 요소를 포함하는 컬렉션이다.
+        //스타일 적용을 위해서는 컬렉션 내의 각 요소에 개별적으로 접근해야한다.
+
+            let selectNode = document.getElementsByTagName('div')
+            for (let i = 0; i < selectNode.length; i++) {
+                selectNode[i].style.backgroundColor = 'red' 
+            }
+        }     
+    </script>
+    <p><button onclick="classTest()">classTest</button></p>
+    <script>
+        function classTest(){
+            let selectNode = document.getElementsByClassName('b1')
+            for (let i = 0; i < selectNode.length; i++) {
+                selectNode[i].style.backgroundColor = 'green'
+            }
+        }
+    </script>
+    <p><button onclick="nameTest()">nameTest</button></p>
+    <script>
+        function nameTest(){
+            let addressNode=document.getElementsByName('address')
+            let resultNode=document.getElementById('result')
+            resultNode.innerHTML=`${addressNode[0].value}`
+        }
+    </script>
+
+    <p><button onclick="selectorTest()">selector</button></p>
+    <script>
+        function selectorTest(){
+            let selectorNode=document.querySelectorAll('#a2 div')  //id가 a2고 그 하위에 있는 div
+              for (let i = 0; i < selectorNode.length; i++) {
+                selectorNode[i].style.backgroundColor = 'blue'
+            }
+        }
+    </script>
+</body>
+</html>
