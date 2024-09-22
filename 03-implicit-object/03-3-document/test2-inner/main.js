@@ -29,7 +29,7 @@ console.log(link1.getAttribute('href'))  //http://www.google.com
 
 //속성변경
 let link2 = document.getElementById('link2')
-link2.setAttribute('href', 'http://www.naver,com')
+link2.setAttribute('href', 'http://www.naver.com')
 console.log(link2.href) //http://www.naver,com/
 
 //속성 제거 
