@@ -14,7 +14,7 @@ area2.addEventListener('click', () => {
 })
 area3.addEventListener('click', (e) => {
     console.log('버블링 area3이벤트 핸들러')
-    e.stopPropagation()
+    // e.stopPropagation()
 })
 
 //이벤트 핸들러 캡처링 
@@ -44,3 +44,7 @@ form1.addEventListener('click', (e) => {
     //개발자 js code에서 ajax로 서버 연동
     e.preventDefault()
 })
+
+
+let area1 = document.querySelector('#area1')
+console.log(area1.style.width) //200px
