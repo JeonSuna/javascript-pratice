@@ -40,4 +40,37 @@ function User2(name, age) {
 let user1 = new User2('홍길동', 25)
 let user2 = new User2('김길동', 32)
 
-user1.sayHello() //홍길동,25 
+user1.sayHello() //홍길동,25
+
+//생성자 함수와 return
+//생성자 함수가 nw로 호출이 되면 함수 내에서 명시적으로 return 시키지 않아도
+//생성된 객체가 리턴된다 
+function User3(name, age) {
+    this.name = name
+    this.age = age
+    return 10
+}
+let user3 = new User3('홍길동', 30)
+console.log(user3)//return써도 return값 무시되고 객체나옴
+
+function User4(name, age) {
+    this.name = name
+    this.age = age
+    return {
+        prodId: 1,
+        prodName:'노트북'
+    }
+}
+let user4 = new User4('김길동', 40)
+console.log(user4) //{prodId: 1, prodName: '노트북'}
+
+//외부에서 객체 멤버 추가 
+console.dir(user1) 
+console.dir(user2) 
+// 외부에서 추가 가능하고, 추가 한 객체에만 멤버가 존재한다
+user1.address = 'seoul'
+user1.helloFun = function () {
+    console.log('hello')
+}
+console.dir(user1) //seoul과 함수 추가됨 
+console.dir(user2) //이건 따로 추가안했으니 그대로
