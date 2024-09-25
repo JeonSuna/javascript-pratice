@@ -30,12 +30,13 @@ let message = {
             count: 3,
             members: ['jska2w3', 'suna', 'kim'], //배열 이유 마찬가지
             add: function (name) {
-                this.count++
+                this.count++ //여기서의 this는 emojis를 가리킴
                 this.members.push(name)
             }
         }
     ],
     addEmoji: function (emojiId, memberId) {
+        //밑에 조건문에서의 this는 message를 가르킴
         if (this.emojis.every(item => item.id !== emojiId)) {
             this.emojis.push({
                 id: emojiId,
@@ -46,7 +47,7 @@ let message = {
                     this.members.push(name)
                 }
             })
-        } else {
+        } else { //
             let index = this.emojis.findIndex((item) => item.id === emojiId)
             this.emojis[index].add(memberId)
         }

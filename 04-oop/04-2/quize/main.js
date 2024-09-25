@@ -35,11 +35,12 @@ function Emoji(emojiId) {
 }
 
 function Message(msg, member) {
-    this.msgId = ++msgId
+    this.msgId = ++msgId //고유한 id를 생성하기 위해
     this.msg = msg
     this.member = member
     this.date = new Date().toLocaleString()
     this.emojis = []
+    //이모지가 이미 있는지 확인하고, 없으면 새로 만들고 있으면 기존 이모지에 사용자를 추가함
     this.addEmoji = function (emojiId, memberId) {
         if (this.emojis.every(item => item.emojiId !== emojiId)) {
             let emoji = new Emoji(emojiId)
