@@ -39,9 +39,10 @@ let rect1 = new Rectangle('react1', 100, 200)
 console.log(rect1.name, rect1.width, rect1.height) // name을 rectangle에서 직접 준비하지 않았는데
 ///shape 생성자 함수를 같이 실행 시킴, shape에 등록한것이 rectangle에서 자신것처럼 사용하고 있다. ==> 상속개념
 
+
 //상위를 지정해서(Shape) 객체 생성 시점에 상위 생성자함수까지 호출되었지만 , 상위의 prototype까지는 호출되지 않는다
 // rect1.draw()//error
-// 어떤 생성자 함수를 상속하고자 할 때  그 함수의 prototype까지 상속되게 하고자 한다면
+
 
 //어떤 생성자 함수를 상속하고자 할 때 , 그 함수의 prototype까지 상속되게 하고자 한다면
 Rectangle.prototype = new Shape()
