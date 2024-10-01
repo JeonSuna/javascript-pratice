@@ -1,7 +1,7 @@
 "use strict";
 function User(name) {
-    this.name = name
-    User.prototype.point=20
+    this.name = name //객체에 저장
+    User.prototype.point=20 //프로토타입 저장
     User.prototype.sayHello = function () {
         console.log(`hello,${this.name},${this.point}`)
     }

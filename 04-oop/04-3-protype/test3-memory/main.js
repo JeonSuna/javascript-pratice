@@ -1,7 +1,7 @@
 "use strict";
 
 function User1(name) {
-    this.name = name //객체별로 따로 유자
+    this.name = name //객체별로 따로 유지
     this.sayHello = function () {
         console.log(`hello ${this.name}`) //새로운 객체 생성마다 새로운 함수가 만들어질것이다
     }

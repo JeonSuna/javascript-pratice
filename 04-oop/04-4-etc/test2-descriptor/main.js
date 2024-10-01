@@ -4,14 +4,14 @@ let obj = {
     age: 10,
     address:'seoul'
 }
-//특정 개체의 property의 description확인
+//특정 객체의 property의 description확인
 console.log(Object.getOwnPropertyDescriptor(obj, 'name'))
 //{ value: '홍길동', writable: true, enumerable: true, configurable: true }
 
 //writable: 값 변경 못하게 하고자 할 때
 Object.defineProperty(obj, 'age', { writable: false })
 obj.name = '김길동'
-/*
+/* age눈 값 변경 못하게해서 밑에처럼 오류 뜸
 obj.age = 20 //Cannot assign to read only property 'age' of object '#<Object>'
 */
 //enumerable

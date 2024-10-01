@@ -20,11 +20,12 @@ function User(name, age, adress) {
     User.prototype.adress=adress
 }
 let user1 = new User('jeon', 20, '새솔동')
-console.log(user1.name,user1.age,user1.adress)
+console.log(user1.name, user1.age, user1.adress) 
+console.log(user1)
 let user2 = new User('kim', 40, '어디겡')
-console.log(user2.name, user2.age, user2.adress)
-console.log(user1.name, user1.age, user1.adress)
-//age와 address는 user1의 메모리에는 없는 것이기에 상속 받아 사용은 할 수 있지만,
+console.log(user2.name, user2.age, user2.adress)//kim,40,어디겡
+console.log(user1.name, user1.age, user1.adress)//jeon,40,어디겡 =>user2에 의해 prototype변경
+//age와 address는 user1의 객체 메모리에는 없는 것이기에 상속 받아 사용은 할 수 있지만,
 // 값은 prototype 객체에 저장된 상태로 나온다.
 console.dir(user1)
 console.dir(user2)
@@ -34,7 +35,7 @@ user1.adress='incheon'
 //prototype에 선언된 변수 값을 객체에서 변경을 시키면
 //프로토타입의  데이터가 변경되지 않고 그 객체내에 동일 이름의 변수가 선언되어
 //그 객체내에 유지되는 데이터가 된다
-console.log(user1.name,user1.age,user1.adress) //jeon,40,incheon
+console.log(user1.name,user1.age,user1.adress) //jeon,50,incheon  ==>객체 메모리가 먼저다
 console.log(user2.name, user2.age, user2.adress) // kim,40,어디겡
 console.dir(user1)
 console.dir(user2)

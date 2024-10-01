@@ -41,11 +41,12 @@ console.log(rect1.name, rect1.width, rect1.height) // name을 rectangle에서 �
 
 
 //상위를 지정해서(Shape) 객체 생성 시점에 상위 생성자함수까지 호출되었지만 , 상위의 prototype까지는 호출되지 않는다
+
 // rect1.draw()//error
 
 
 //어떤 생성자 함수를 상속하고자 할 때 , 그 함수의 prototype까지 상속되게 하고자 한다면
-Rectangle.prototype = new Shape()
+Rectangle.prototype = new Shape() //==> 프로토타입까지 상속시킴
 Rectangle.prototype.calcArea = function () {
     console.log(`area:${this.width*this.height}`)
 }
