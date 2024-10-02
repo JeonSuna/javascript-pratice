@@ -64,3 +64,5 @@ let count = 100
 //하지만 값 유지 
 console.log(counter(increment)) //2
 
+let id = setInterval(sayHello, 1000.'전선아')
+setTimeout(()=>clearInterval(id),3000)
