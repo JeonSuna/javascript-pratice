@@ -25,6 +25,7 @@ let paymentPrice = 0
 
 
 
+
 //옵션 선택, 현재 유저가 선택한 option획득한다
 function selectChange(e) {
     let values = e.target.selectedOptions

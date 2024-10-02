@@ -5,7 +5,8 @@
 //상속의 기본은 부모에 선언된 멤버를 내꺼처럼 사용한다
 class Shape {
     name = '도형'
-    x = 0
+    x = 0 //this 안 쓴 이유 : class는 this없이 프로퍼티 설정 가능, 
+                            //객체 생성될 때 자동으로 초기화 가능
     y = 0
     draw() {
         console.log(`${this.name}을 ${this.x},${this.y}에 그립니다`)
@@ -17,7 +18,7 @@ class Rect extends Shape {
 }
 let rect = new Rect()
 rect.name = '사각형'
-rect.x = 10 //생성자함수와 다르게 this를 사용 안해도 됨
+rect.x = 10 
 rect.y = 10
 rect.width = 100
 rect.height = 100
@@ -58,18 +59,18 @@ console.log(Sub.data3)//30 =>static도 상속 가능하다
 // }
 // let obj1=new Sub1
 
-//개발자가 명시저으로 생성자를 추가한다
+//개발자가 명시적으로 생성자를 추가한다
 class Super1 {
     constructor() { }
 }
 class Sub1 extends Super1 {
     // constructor() { }//Must call super constructor
     //아래처럼 개발자가 명시적으로 생성자를 추가했고, 상위 클래스가 명시되어 있다면
-    //생성자 내에서 곡 사우이 생성자 호출해야 한다
+    //생성자 내에서 꼭 상위 생성자를 먼저 호출해야 한다
 
     //     constructor() {
     //         super()// 상위 생성자 호출 구문, 생성자 내에서만 작성이 가능하다
-    //         //상속 관계에 있는 클래스에서 명시젃으로 생성자를 추가하지 않으면 자동으로 추가되는 생성자 코드
+    //         //상속 관계에 있는 클래스에서 명시적으로 생성자를 추가하지 않으면 자동으로 추가되는 생성자 코드
     //     }
 
     constructor() {
@@ -121,7 +122,7 @@ class Shape2 {
     //변수 오버라이드
     data = 20
     constructor(name, x, y, width, height) {
-        super(name, x, y)
+        super(name, x, y) //super을 호출하여 부모 생성자의 초기화를 명시적으로 초기화해야함
         this.width = width
         this.height = height
     }

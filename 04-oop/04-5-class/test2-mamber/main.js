@@ -3,6 +3,7 @@
 class User {
     //class 영역={ }에 멤버 선언
     name
+    //함수 내에서 객체 멤버 선언 O
     sayHello() {
         //멤버 함수내에서 this로 객체 멤버 선언 
         this.adress='seoul'
@@ -17,7 +18,7 @@ class User {
     }
 }
 let obj = new User('홍길동', 20)
-//클래스 외부에서 객체의 멤버 추가
+//클래스 외부에서 객체의 멤버 선언 O
 obj.phone = '00102'
 obj.sayHello()
 obj.sayHello2()

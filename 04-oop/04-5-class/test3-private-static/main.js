@@ -47,7 +47,8 @@ class Myclass{
     }
 }
 //static멤버 접근..객체 생성 없이, 클래스명으로 접근
-Myclass.myFun2() //myFun2 call undefined 20
+Myclass.myFun2() //myFun2 call undefined 20 ==>static메모리에 data올라오지 않음. 
+                                            // 객체 메모리와 static메모리를 구분해라
 console.log(Myclass.data2)//20
 
 //객체멤버를 클래스명으로 접근

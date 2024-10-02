@@ -52,6 +52,6 @@ obj3.sayHello() //hello,김길동
 //하나의 클래스내에 생성자 여러개 선언 
 class User4{
     constructor() { }
-    constructor(name) { }
+    constructor(name) { }//A class may only have one constructor
 }
-let obj4 = new User4('김길동') //A class may only have one constructor
+let obj4 = new User4('김길동') 
