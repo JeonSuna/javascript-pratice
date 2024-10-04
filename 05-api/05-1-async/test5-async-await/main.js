@@ -92,7 +92,7 @@ function funB() {
 //     console.timeEnd()
 // }
 // myFun7() //default: 4006.35595703125 ms
-    
+
 // async function myFun8() {
 //     console.time()
 //     //함수 호출에 await가 아니라 결과 데이터에 await
@@ -101,7 +101,7 @@ function funB() {
 //     let bData = funB()
 //     console.log(await  aData)
 //     console.log(await  bData)
-//     console.timeEnd()
+//     console.timeEnd()//a든 b든 데이터가 다 발생 되었을 때의 시간 
 // }
 // myFun8() //default: 2015.455810546875 ms
 
@@ -113,7 +113,7 @@ async function myFun9() {
     //배열에 건 함수를 동시에 실행 시키면서 모두 다 데이터가 획득된 경우 callback호출 
     Promise.all([funA(), funB()]).then((value) => {
         console.log(value) //'funA data', 'funB data']
-        console.timeEnd()//default: 2004.4091796875 ms
+        console.timeEnd()//default: 2004.4091796875 ms 
 })
 }
 myFun9()
