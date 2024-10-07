@@ -13,6 +13,6 @@ open api를 제공하는 벤더의 사이트에 가서 이용방법을 확인한
 미리보기 -> open API ->
 맨 끝 99->최대99까지
 
-http://openAPI.seoul.go.kr:8088/73676962556a657533367872776376/json/RealtimeCityAir/1/99/
+http://openAPI.seoul.go.kr:8088/73676962556a657533367872776376/json/RealtimeCityAir/1/99/ -->인증키 뒤에 json으로 바꿔주기
 
 브라우저에서 만들어진 url로 요청 테스트 (url에 입력해보기)

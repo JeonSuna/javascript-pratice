@@ -84,16 +84,16 @@ myFun3(10)
     .then((value) => console.log(`result:${value}`)) //즉시실행함수
     .catch((error) => console.log(error))
     .finally(() => console.log('finally 실행 부분')) //필수는 아니고 원한다면
-// //finally 는 마지막에 무조건 실행
+//finally 는 마지막에 무조건 실행
     
-// //result:100
-// //finally부분 실행
+//result:100
+//finally부분 실행
 
 
-// myFun3(0)
-//     .then((value) => console.log(`result:${value}`))
-//     .catch((error) => console.log(error))
-//     .finally(() => console.log('finally 실행 부분')) //필수는 아니고 원한다면
-//0보다 큰 수를 지정하세요
+myFun3(0)
+    .then((value) => console.log(`result:${value}`))
+    .catch((error) => console.log(error))
+    .finally(() => console.log('finally 실행 부분')) //필수는 아니고 원한다면
+// 0보다 큰 수를 지정하세요
 // finally 실행 부분
     

@@ -26,7 +26,7 @@ function sum() {
             //일반 문자열,json문자열,xml문자열
             //json문자열을 javascript object literal로 변형해서 핸들링
             let data = JSON.parse(xhr.responseText) //결과( xhr.responseText)를 받은것을  객체로 전달함 =>data는 객체
-            //서버에 데이터 화면 출력
+            //서버에 데이터 화면 출력 //responseText 속성은 데이터가 도착 했을 때만 설정된다
             resultNode.innerHTML=data.result //서버에서 result에 결과 데이터를 담아서 전달함으로 
         }
     }
