@@ -82,7 +82,8 @@ function handleImageFile(file) {
         //항상 I0(file,network)은 에러 가능성이 많아서 따로 이벤트 걸어줌  
     }
     
-    
     reader.readAsDataURL(file) //이미지를  base64로 인코딩된 문자열로 읽어라  ==>base64 문자열을
     //<img> 태그로 출력이 가능함으로 
 }
+
+
