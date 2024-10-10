@@ -1,0 +1,44 @@
+{
+ "compilerOptions": {
+  //컴파일 시킨 산출물 (js 파일)을 만들 디렉토리 위치
+  "outDir":"./build/",
+  //compile대상에 ts뿐만 아니라 js까지 포함시킬까?
+  //true - 개발자가 작성한 js파일이 es6인 경우
+  //현존하는 브라우저중에서 아직 es6를 지원하지 못하는 브라우저가 있을 수도 있고
+  //그 브라우저에서도 정상적으로 동작하게 하려면...
+  //es6->es5코드로 변형 시켜서 전체 브라우저에 동작하게 한다 -->일때 true로 설정
+  "allowJs": true,
+  //자바스크립트 모듈화 방식이 2가지 이다
+  //es6 스타일의 모듈화와 방법이 있고 commonjs(과거에 사용되었던)방식이 있다
+  //그 둘의 호완성을 제공하는게 esModleInterop이다
+  "esModuleInterop": true,
+
+  //json파일을 마치 코드에서 객체로 바로 이용이 가능하게 하는 것이다
+"resolveJsonModule": true,
+
+//ts를 js로 컴파일 시킬 때  js.map파일을 자동으로 만들어 달라는 것이다
+//필요이유: 개발자가 분석한 파일은 아닌데 디버깅을 위해서 만들어주는게 좋다 
+//런타임시에는 js가 실행된다 , 런타임 에러가 발생하면 js라인수가 나온다
+//우리가 개발하고 우리가 유지보수하는 파일은 js가 아니라 ts이다
+// 런타임 에러가 발생했을때 에러 위치를 ts코드 위치로 알려줘야 유지보수가 편하다
+//이 둘간의 관계를 유지하는 파일이 map,이 map파일이 있어야 ts위치로 알려준다
+"sourceMap": true,
+//any타입을 허용 할 것인지에 대한 설정
+//any-아무타입이나 다 허용하겟다 임으로
+//권장하지는 않는다 
+"noImplicitAny": true,
+//컴파일된 js코드를 es5스타일로 할것인지 es6스타일로 할것인지
+"target":"ES5", //전체 브라우저에 동작해야하기 때문에 
+//jsx구문을 어느 형태의 js로 변형시킬까? 대부분react이다
+  "jsx": "react",
+  //모듈화 방식..taeget과 맞추어서 target에서 es5로 하면 commonJs
+  //es6이면 이곳도 es6
+  "module": "CommonJS"
+ } ,
+ //transpile시킬 대상 폴더 파일
+ "include":["./src/**/*"] ,
+//include에이쓴 파일 중 제외시킬 파일들
+"exclude":["node_modules","**/*.spec.ts"]
+
+//src폴더의 서브가 어디가 됐는 모든 파일을,,  es5코드를 transㅅ시켜서 build
+}
